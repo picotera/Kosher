@@ -14,12 +14,12 @@ function addMarker(toAdd)
 	//Add info on click
 	var infoWindowOptions = 
 	{
-		content: toAdd.dsc
+		content: "<div id=\"mapdiv\">" + toAdd.dsc + "<\/div>"
 	};
 
 	var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-	google.maps.event.addListener(marker,'click',function(e){ 
-	  infoWindow.open(map, marker);	  
+	google.maps.event.addListener(marker,'click',function(e){
+		infoWindow.open(map, marker);	  
 	}
 	);
 }
@@ -66,7 +66,7 @@ var markers=[];
 //TODO: Add style
 var mapOptions = 
 {
-    center: new google.maps.LatLng(44,44),
+    center: new google.maps.LatLng(32.797242, 34.992915),
     zoom: 12,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
 };

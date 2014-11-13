@@ -10,18 +10,45 @@ restaurants =
 		"tags":["vegan", "pork"]
 	},
 	{
-		"name":"hudson",
-		"long":44.002,
-		"lat":44.002,
-		"dsc":"addf",
-		"tags":["sabath", "pork"]
+		"name":"Hudson",
+		"long":34.840248,
+		"lat":32.109799,		
+		"icon": "http://kosher.blob.core.windows.net/grapics/40x40pin.png",
+		"dsc":"Hudson",
+		"tags":[]
 	},
 	{
 	"name":"Moses",
 	"lat":32.109132,
 	"long":34.84058,
-	"dsc":"מוזס רמת החייל",
-	"tags":["sabath", "pork"]
+	"dsc":"<rtl>מוזס רמת החייל Tel Aviv<rtl/>",
+	//TODO: Upload
+	"icon": "http://kosher.blob.core.windows.net/grapics/moses.png",
+	"tags":[]
+	},	
+	{
+	"name":"Kkao",
+	"lat":32.113464, 
+	"long": 34.840457, 
+	"dsc":"Kkao",	
+	"icon": "http://kosher.blob.core.windows.net/grapics/40x40pin.png",
+	"tags":["pork","vegan","sabath"]
+	},
+	{
+	"name":"Max Brener",
+	"lat":32.109328, 
+	"long": 34.839820,
+	"dsc":"<div><b><br/>Max Breasdasdner <br/>asd <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>	adasd</b></div>",	
+	"icon": "http://kosher.blob.core.windows.net/grapics/40x40pin.png",
+	"tags":["pork"]
+	},
+	{
+	"name":"Arcaffe",
+	"lat":32.109625,
+	"long": 34.840444,
+	"dsc":"Arcaffe",	
+	"icon": "http://kosher.blob.core.windows.net/grapics/40x40pin.png",
+	"tags":["sabath","pork","vegan"]
 	}
 ]
 

@@ -1,10 +1,12 @@
+//TODO: Fix local paths
 restaurants = 
 [
 	{
 		"name":"Sicilian",
 		"long":44,
 		"lat":44,
-		"dsc":"ad",
+		"dsc":"<b>ad</b>",
+		"icon": "http://kosher.blob.core.windows.net/grapics/40x40pin.png",
 		"tags":["vegan", "pork"]
 	},
 	{
@@ -13,6 +15,13 @@ restaurants =
 		"lat":44.002,
 		"dsc":"addf",
 		"tags":["sabath", "pork"]
+	},
+	{
+	"name":"Moses",
+	"lat":32.109132,
+	"long":34.84058,
+	"dsc":"מוזס רמת החייל",
+	"tags":["sabath", "pork"]
 	}
 ]
 

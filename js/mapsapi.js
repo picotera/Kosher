@@ -1,18 +1,27 @@
-
-
-
 //Functions:
-
 
 // Add a marker to the map and push to the array.
 function addMarker(toAdd)
 {
-	//TODO: Add Description
+	//Add Marker
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(toAdd.lat,toAdd.long),
-		map: map
-  });
+		map: map,
+		icon:toAdd.icon
+	});	
 	markers.push(marker);
+	
+	//Add info on click
+	var infoWindowOptions = 
+	{
+		content: toAdd.dsc
+	};
+
+	var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+	google.maps.event.addListener(marker,'click',function(e){ 
+	  infoWindow.open(map, marker);	  
+	}
+	);
 }
 
 // Sets the map on all markers in the array.
@@ -51,26 +60,38 @@ function refreshMarks(marksArray)
 }
 
 
-// To be run
+// main
 
 var markers=[];
+//TODO: Add style
 var mapOptions = 
 {
     center: new google.maps.LatLng(44,44),
     zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
 };
 
 var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(setCenterPosition);
+    }
+}
+
+function setCenterPosition(position) 
+{
+    map.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+}
 var acOptions =
 {
-	types: ['establishment']
+	types: ['(cities)']
 };
 
 var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'),acOptions);
 autocomplete.bindTo('bounds',map);
 var infoWindow = new google.maps.InfoWindow();
-
+getLocation();
 google.maps.event.addListener(autocomplete, 'place_changed', function() 
 {
 	infoWindow.close();

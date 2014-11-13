@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+	
+	
+	<link rel="stylesheet" href="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-3/dist/css/bootstrap.min.css">
+	
+    <link rel="stylesheet" href="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-3/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/rainbow/themes/github.css">
+	
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(-34.397, 150.644)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+	
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<!-- Optional theme -->
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+	
+  </head>
+  <body>
+  
+	<script src="/temp/app.js"></script>
+		<div id="checkboxes">
+			<input type="checkbox" value="pork" onClick="updateMap();">No Pork!<br>
+			<input type="checkbox" value="sabath" onClick="updateMap();">Only week days <br>
+			<input type="checkbox" value="vegan" onClick="updateMap();">Vegan friendly <br>
+
+		</div>
+	
+    <div id="map-canvas"></div>
+
+	
+	
+	
+	<script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/jquery/dist/jquery.min.js"></script>
+    <script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-3/dist/js/bootstrap.min.js"></script>
+    <script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/angular/angular.min.js"></script>
+    <script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-tagsinput/bootstrap-tagsinput-angular.js"></script>
+    <script src="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/typeahead.js/dist/typeahead.bundle.js"></script>
+	<script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+  </body>
+</html>

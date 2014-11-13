@@ -1,16 +1,12 @@
 [
-	{
-		"name":"Sicilian",
-		"long":44,
-		"lat":44,
-		"dsc":"ad",
-		"tags":["vegan", "pork"]
-	},
-	{
-		"name":"hudson"
-		"long":44.2
-		"lat":44.2
-		"dsc":"addf",
-		"tags":["sabath", "pork"]
-	}
+{
+	"long":44
+	"lat":44
+	"dsc":"ad",
+},
+{
+	"long":44
+	"lat":44.2
+	"dsc":"addf",
+}
 ]

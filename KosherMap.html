@@ -3,6 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+		
+	
+		<link rel="stylesheet" href="./assets/bootstrap.min.css">
+		
+		<script src="./assets/jquery-2.1.1.min.js"></script>
+		<script src="./assets/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="./assets/bootstrap-tagsinput.css">
+		<script src="./assets/bootstrap-tagsinput.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+		<script src="./assets/typeahead.bundle.js"></script>
 		<style>
 		html,body,#map
 		{
@@ -11,6 +21,11 @@
 		}
 
 		#autocomplete
+		{
+			width: 100%;
+			height: 25px;
+		}
+		#tagSearch
 		{
 			width: 100%;
 			height: 25px;
@@ -24,20 +39,66 @@
 	</style>
 	</head>
 	
-	<body>
+	<body>	
+		<input type="text" id="tagSearch"/>
 		<input type="text" id="autocomplete">
-		
-		<div id="checkboxes">
-			<input type="checkbox" value="pork" onClick="updateMap();">No Pork!<br>
-			<input type="checkbox" value="sabath" onClick="updateMap();">Only week days <br>
-			<input type="checkbox" value="vegan" onClick="updateMap();">Vegan friendly <br>
-		</div>
-		
 		<div id="map"></div>
+		<script>
+		//Bootsrap tags
+var cities = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: 'assets/values.json'
+});
+cities.initialize();
 
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>	
-		<script src="http://kosher.blob.core.windows.net/javascript/mapsapi.js"></script>
-		<script src="http://kosher.blob.core.windows.net/javascript/app.js"></script>
+var elt = $('#tagSearch');
+elt.tagsinput({
+  tagClass: function(item) {
+    switch (item.group) {
+      case 'disab'   : return 'label label-primary';
+      case 'food'  : return 'label label-danger label-important';
+      case 'eco': return 'label label-success';
+      case 'religion'   : return 'label label-default';
+      case 'social'     : return 'label label-warning';
+    }
+  },
+  itemValue: 'value',
+  itemText: 'text',
+  typeaheadjs: {
+    name: 'cities',
+    displayKey: 'text',
+    source: cities.ttAdapter()
+  }
+});
+
+//Set Events
+elt.on('itemAdded',function(event)
+{
+	updateMap();
+});
+
+elt.on('beforeItemAdd',function(event)
+{
+	updateMap();
+});
+
+elt.on('itemRemoved',function(event)
+{
+	updateMap();
+});
+
+//Returns the underlying values of tags
+function getTags()
+{
+	return $("#tagSearch").val();	
+}
+</script>
+
 		
+		
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>	
+	<script src="./javascript/mapsapi.js"></script>
+	<script src="./javascript/app.js"></script>
 	</body>
 </html>

@@ -19,6 +19,7 @@ function addMarker(toAdd)
 
 	var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
 	google.maps.event.addListener(marker,'click',function(e){
+		infoWindow.setContent(infoWindow.getContent())
 		infoWindow.open(map, marker);	  
 	}
 	);
@@ -67,8 +68,9 @@ var markers=[];
 var mapOptions = 
 {
     center: new google.maps.LatLng(32.797242, 34.992915),
-    zoom: 12,
+    zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+	styles: [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}],
 };
 
 var map = new google.maps.Map(document.getElementById('map'), mapOptions);

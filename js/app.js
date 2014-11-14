@@ -75,12 +75,39 @@ restaurants =
 	},
 	{
 	"name":"AM:PM",
-	"lat":32.084001, 
+	"lat": 32.084001, 
 	"long": 34.816759,
 	"dsc":"AM:PM",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["also_vegan","shabbath"]
+	},
+	{
+	"name":"Matilda",
+	"lat": 32.111014, 
+	"long": 34.816087,
+	"dsc":"Matilda",	
+	"icon": "../grapics/40x40pin.png",
+	"tags":["wheelchair"]
+	},
+	{
+	"name":"חומוס גבעתיים",
+	"lat": 32.075427, 
+	"long": 34.808487,
+	"dsc":"חומוס גבעתיים",	
+	"icon": "../grapics/40x40pin.png",
+	"tags":["wheelchair","kosher","also_vegan"]
 	}
+	,
+	{
+	"name":"פלאפל אציר",
+	"lat": 32.110395, 
+	"long": 34.822452,
+	"dsc":"פלאפל אציר",	
+	"icon": "../grapics/40x40pin.png",
+	"tags":["wheelchair","kosher","also_vegan","shabbath","no_slaves"]
+	}
+	
+	
 ]
 
 function getTags()

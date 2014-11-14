@@ -3,11 +3,11 @@ restaurants =
 [
 	{
 		"name":"Sicilian",
-		"lat":32.089132,
-		"long":34.77278,
+		"lat":32.083164, 
+		"long":34.771680,
 		"dsc":"Sicilian",
 		"icon": "../grapics/40x40pin.png",
-		"tags":["no_slaves","also_vegan","sign_lang"]
+		"tags":["no_slaves","also_vegan"]
 	},
 	{
 		"name":"Hudson",
@@ -15,15 +15,15 @@ restaurants =
 		"lat":32.109799,		
 		"icon": "../grapics/40x40pin.png",
 		"dsc":"Hudson",
-		"tags":["no_slaves","social_tag"]
+		"tags":["no_slaves","wheelchair"]
 	},
 	{
 	"name":"Budhdha Burger",
-	"lat":32.069132,
-	"long":34.77078,
+	"lat":32.082254, 
+	"long":34.781475,
 	"dsc":"בודהה בורגר",
 		"icon": "../grapics/40x40pin.png",
-	"tags":["no_slaves","wheelchair","vegan","kosher","social_tag"]
+	"tags":["no_slaves","vegan","also_vegan","social_tag"]
 	},	
 	{
 	"name":"Moses",
@@ -31,12 +31,20 @@ restaurants =
 	"long":34.84058,
 	"dsc":'<img src="../grapics/MosesRest.png"/>',
 	"icon": "../grapics/moses.png",
-	"tags":["no_slaves","wheelchair"]
+	"tags":["no_slaves","wheelchair","breil","also_vegan"]
+	},	
+	{
+	"name":"Aroma",
+	"lat":32.097852,
+	"long": 34.773899,
+	"dsc":'Aroma',
+	"icon": "../grapics/40x40pin.png",
+	"tags":["no_slaves"]
 	},	
 	{
 	"name":"Kkao",
-	"lat":32.113464, 
-	"long": 34.800457, 
+	"lat":32.063982, 
+	"long": 34.773902, 
 	"dsc":"Kkao",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["no_slaves","shabbath","also_vegan","kosher_compiler","kosher"]
@@ -47,31 +55,31 @@ restaurants =
 	"long": 34.839820,
 	"dsc":"Max Brener",	
 	"icon": "../grapics/40x40pin.png",
-	"tags":["no_slaves","kosher"]
+	"tags":["no_slaves","wheelchair"]
 	},
 	{
 	"name":"Arcaffe",
-	"lat":32.109625,
-	"long": 34.780444,
+	"lat":32.112188,
+	"long":  34.795873,
 	"dsc":"Arcaffe",	
 	"icon": "../grapics/40x40pin.png",
-	"tags":["shabbath","also_vegan","kosher_compiler","kosher"]
+	"tags":["shabbath","also_vegan","wheelchair"]
 	},
 	{
 	"name":"Dabush Shawarma",
 	"lat":32.079825,
-	"long": 34.780644,
+	"long": 34.782064,
 	"dsc":"Dabush Shawarma",	
 	"icon": "../grapics/40x40pin.png",
-	"tags":["shabbath","also_vegan","kosher_compiler","kosher"]
+	"tags":["shabbath","kosher_compiler","kosher"]
 	},
 	{
 	"name":"AM:PM",
-	"lat":32.059025,
-	"long": 34.780044,
+	"lat":32.084001, 
+	"long": 34.816759,
 	"dsc":"AM:PM",	
 	"icon": "../grapics/40x40pin.png",
-	"tags":["also_vegan","no_slaves"]
+	"tags":["also_vegan","shabbath"]
 	}
 ]
 

@@ -1,0 +1,12 @@
+[ { "value": "breil"          , "text": "נגיש לעיוורים"      , "group": "disab"   },
+  { "value": "no_polution"    , "text": "לא מזהם"            , "group": "eco"     },
+  { "value": "no_slaves"      , "text": "אין עובדי קבלן"     , "group": "social"  },
+  { "value": "social_tag"     , "text": "התו החברתי"         , "group": "social"  },
+  { "value": "shabbath"       , "text": "סגור בשבת"          , "group": "religion"},
+  { "value": "sign_lang"      , "text": "דוברי שפת סימנים"   , "group": "disab"   },
+  { "value": "wheelchair"     , "text": "נגיש לכיסא גלגלים"  , "group": "disab"   },
+  { "value": "vegan"          , "text": "רק טבעוני"          , "group": "food"    },
+  { "value": "also_vegan"     , "text": "יש טבעוני"          , "group": "food"    },
+  { "value": "kosher_compiler", "text": "כשר מהדרין"         , "group": "food"    },
+  { "value": "kosher"         , "text": "כשר"                , "group": "food"    }
+]

@@ -3,8 +3,8 @@ restaurants =
 [
 	{
 		"name":"Sicilian",
-		"long":34.840348,
-		"lat":32.110799,
+		"lat":32.089132,
+		"long":34.77278,
 		"dsc":"Sicilian",
 		"icon": "../grapics/40x40pin.png",
 		"tags":["no_slaves","also_vegan","sign_lang"]
@@ -19,8 +19,8 @@ restaurants =
 	},
 	{
 	"name":"Budhdha Burger",
-	"lat":32.109132,
-	"long":34.84078,
+	"lat":32.069132,
+	"long":34.77078,
 	"dsc":"בודהה בורגר",
 		"icon": "../grapics/40x40pin.png",
 	"tags":["no_slaves","wheelchair","vegan","kosher","social_tag"]
@@ -36,7 +36,7 @@ restaurants =
 	{
 	"name":"Kkao",
 	"lat":32.113464, 
-	"long": 34.840457, 
+	"long": 34.800457, 
 	"dsc":"Kkao",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["no_slaves","shabbath","also_vegan","kosher_compiler","kosher"]
@@ -52,23 +52,23 @@ restaurants =
 	{
 	"name":"Arcaffe",
 	"lat":32.109625,
-	"long": 34.840444,
+	"long": 34.780444,
 	"dsc":"Arcaffe",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["shabbath","also_vegan","kosher_compiler","kosher"]
 	},
 	{
 	"name":"Dabush Shawarma",
-	"lat":32.109825,
-	"long": 34.840644,
+	"lat":32.079825,
+	"long": 34.780644,
 	"dsc":"Dabush Shawarma",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["shabbath","also_vegan","kosher_compiler","kosher"]
 	},
 	{
 	"name":"AM:PM",
-	"lat":32.109025,
-	"long": 34.840044,
+	"lat":32.059025,
+	"long": 34.780044,
 	"dsc":"AM:PM",	
 	"icon": "../grapics/40x40pin.png",
 	"tags":["also_vegan","no_slaves"]

@@ -77,7 +77,7 @@ restaurants =
 
 function getTags()
 {
-	return $("#tagSearch").val();	
+	return $("#tagsearch").val();	
 }
 
 function updateMap()

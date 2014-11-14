@@ -1,6 +1,81 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<style>
+		html,body,
+		#map
+		{
+			height: 100%;
+			margin: 0;
+		}
+
+		#autocomplete
+		{
+			width: 100%;
+		}
+		
+		.bootstrap-tagsinput
+		{
+			width: 100%;
+		}
+		.twitter-typeahead
+		{
+			width:100%
+		}
+		
+		#mapdiv
+		{
+			min-width:150px;
+			min-height:50px;
+		}
+		
+		.tt-query,
+.tt-hint {
+    width: 396px;
+    height: 30px;
+    padding: 8px 12px;
+    font-size: 24px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.tt-query {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: #999
+}
+
+.tt-dropdown-menu {
+    width: 422px;
+    margin-top: 12px;
+    padding: 8px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+    color: #fff;
+    background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+	</style>
 		<meta charset="UTF-8">
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 		
@@ -13,35 +88,12 @@
 		<script src="../assets/bootstrap-tagsinput.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
 		<script src="../assets/typeahead.bundle.js"></script>
-		<style>
-		html,body,#map
-		{
-			height: 100%;
-			margin: 0;
-		}
-
-		#autocomplete
-		{
-			width: 100%;
-			height: 25px;
-		}
 		
-		#tagSearch
-		{
-			width: 100%;
-			height: 25px;
-		}		
-		#mapdiv
-		{
-			min-width:150px;
-			min-height:50px;
-		}
-	</style>
 	</head>
 	
-	<body>	
-		<input type="text" id="tagSearch"/>
+	<body>		
 		<input type="text" id="autocomplete"/>
+		<input type="text" id="tagsearch"/>
 		<div id="map"></div>
 		<script>
 		//Bootsrap tags
@@ -52,7 +104,7 @@ var cities = new Bloodhound({
 });
 cities.initialize();
 
-var elt = $('#tagSearch');
+var elt = $('#tagsearch');
 elt.tagsinput({
   tagClass: function(item) {
     switch (item.group) {
@@ -91,7 +143,7 @@ elt.on('itemRemoved',function(event)
 //Returns the underlying values of tags
 function getTags()
 {
-	return $("#tagSearch").val();	
+	return $("#tagsearch").val();	
 }
 </script>
 
@@ -100,5 +152,6 @@ function getTags()
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>	
 	<script src="../javascript/mapsapi.js"></script>
 	<script src="../javascript/app.js"></script>
+	
 	</body>
 </html>

@@ -29,7 +29,7 @@ restaurants =
 	"name":"Moses",
 	"lat":32.109132,
 	"long":34.84058,
-	"dsc":"<rtl>מוזס רמת החייל Tel Aviv<rtl/>",
+	"dsc":'<img src="../grapics/MosesRest.png"/>',
 	"icon": "../grapics/moses.png",
 	"tags":["no_slaves","wheelchair"]
 	},	
